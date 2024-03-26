@@ -1,8 +1,0 @@
-/* Khi ở chế độ tablet - máy tính bảng */
-@media screen and (max-width: 991.98px) {
-  /* Điều chỉnh avatar */
-  .nav-i,
-  .avatar {
-    display: none;
-  }
-}
