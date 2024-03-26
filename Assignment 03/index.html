@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <title>Assignment 03 Main</title>
+  </head>
+  <body>
+    <!-- Đặt position cho banner và thông tin tên bản thân -->
+    <div id="banner">
+      <div class="imgbd">
+        <img src="./images/banner.jpg" alt="imgb" class="imgb" />
+      </div>
+
+      <div class="tt">
+        <h1>Nguyễn Tâm Phương Vũ</h1>
+        <span>Software Engineer</span>
+      </div>
+    </div>
+
+    <!-- Thanh điều hướng Nav -->
+    <section id="nav-bar">
+      <nav class="container p-0">
+        <a href="#"> <i class="icon-user"></i> Thông tin</a>
+        <a href="#"><i class="icon-doc-text-inv"></i> Lý lịch</a>
+        <img src="./images/Hinh anh Ban than.jpg" alt="avatar" class="avatar" />
+        <div class="nav-i">NTPV<br />CV</div>
+        <a href="#"><i class="icon-mail-alt"></i>Chứng chỉ</a>
+        <a href="#"><i class="icon-star-1"></i>Dự Án</a>
+      </nav>
+    </section>
+
+    <!-- Thông tin cá nhân cụ thể -->
+    <section id="about">
+      <div class="container-fluid">
+        <div class="row align-item-center justify-content-md-center p-0">
+          <div id="target" class="col-md">
+            <!-- Mục tiêu nghề nghiệp -->
+            <h1 class="section-title">Mục tiêu nghề nghiệp</h1>
+            <p class="j-pi">
+              Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh Nghiệp
+              của FUNiX. Em mong muốn mình sẽ được làm việc với vị trí
+              <b>Fullstack Developer</b>, có thể vận dụng những kiến thức đã
+              được trau dồi và không ngừng học hỏi để phát triển bản thân, cũng
+              như hoàn thành tốt nhất công việc được giao.
+            </p>
+          </div>
+
+          <div id="personal-info" class="col-md container-fluid">
+            <!-- Tiêu đề thông tin cá nhân -->
+            <h1 class="section-title">Thông tin cá nhân</h1>
+
+            <!-- Điền thông tin Email -->
+            <div id="submitE">
+              <input
+                type="email"
+                class="form-control p-1"
+                id="inputE"
+                aria-describedby="emailHelp"
+                placeholder="Vui lòng nhập email!"
+              />
+              <!-- <small id="notiE" class="form-text"
+                  >Hãy nhập email để xác thực.</small
+                > -->
+              <p id="notiE" class="form-text p-1 mt-0">
+                Hãy nhập email để xác thực.
+              </p>
+              <button id="sub" class="btn btn-primary bsub" type="submit">
+                Submit
+              </button>
+            </div>
+
+            <!-- Thông tin cá nhân cụ thể -->
+            <div id="p-info" class="pi j-pi d-none">
+              <ul class="mt-40 info">
+                <li><span>Giới tính</span> : Nam</li>
+                <li><span>Ngày sinh</span> : 19/05/1980</li>
+                <li><span>Điện thoại</span> : (+84) 912398xxx</li>
+                <li><span>Email</span> : sinhvien@funix.edu.vn</li>
+                <li><span>Địa chỉ</span> : Số 10, đường 10, Hà Nội</li>
+                <li><span>Website</span> : https://abc.tech</li>
+              </ul>
+              <i class="icon-twitter"></i>
+              <i class="icon-facebook"></i>
+              <i class="icon-gplus"></i>
+              <i class="icon-linkedin"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thông tin nghề nghiệp -->
+    <section id="job-info">
+      <div class="container">
+        <div class="grid m-4">
+          <!-- Thông tin kinh nghiệm -->
+          <div
+            class="vmB g-col-12 g-col-md-6 g-col-xl-4 exp border p-5"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Kinh nghiệm</h1>
+              <i class="icon1 ic-toolbox ps-2"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <ul class="ul uleea d-none ttcn">
+              <li><h4>Công ty A</h4></li>
+              <p class="timeline">
+                09/2015 - <span class="yearp">Hiện tại</span>
+              </p>
+              <p>
+                Chuyên viên tâm lý <br />
+                - Hỗ trợ và phối hợp cùng phụ huynh học sinh tại trường học.
+                <br />
+                - Tham vấn Tâm lý cho học sinh về học tập, cảm xúc, xã hội.
+              </p>
+              <li><h4>Công ty B</h4></li>
+              <p class="timeline">09/2011 - 09/2019</p>
+              <p>
+                Giáo viên Giáo dục Thể chất: <br />
+                - Giảng dạy bộ môn Thể dục. <br />
+                - Thực hiện các công việc khác theo hướng dẫn của cấp trên
+              </p>
+            </ul>
+          </div>
+
+          <!-- Thông tin học vấn -->
+          <div
+            class="vmB g-col-12 g-col-md-6 g-col-xl-4 edu border p-5"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Học vấn</h1>
+              <i class="icon1 ic-pencil"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <ul class="ul uleea d-none ttcn">
+              <li><h4>Thạc sỹ Tâm lý học Trường học</h4></li>
+              <p class="timeline">09/2018 - 09/2022</p>
+              <p>- Trường Đại học Sư phạm Hà Nội</p>
+              <li><h4>Cử nhân Tâm lý học</h4></li>
+              <p class="timeline">08/2014 - 08/2016</p>
+              <p>- Đại học Sư phạm TP.HCM <br /></p>
+            </ul>
+          </div>
+
+          <!-- Thông tin hoạt động -->
+          <div
+            class="g-col-12 g-col-md-6 g-col-xl-4 border p-5 vmB"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Hoạt động</h1>
+              <i class="icon1 ic-toolbox"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <ul class="ul uleea d-none ttcn">
+              <li><h4>Hội Tâm lý học Giáo dục TP.HCM</h4></li>
+              <p class="timeline">12/2019 - 12/2020</p>
+              <p>
+                Chuyên viên tâm lý <br />
+                - Hỗ trợ và phối hợp cùng phụ huynh học sinh tại trường học.
+                <br />
+                - Tham vấn Tâm lý cho học sinh về học tập, cảm xúc, xã hội.
+              </p>
+              <li><h4>Chương trình Hỗ trợ Bệnh nhân Covid</h4></li>
+              <p class="timeline">01/2021 - 06/2021</p>
+              <p>
+                Chuyên viên Tâm lý cho Bệnh nhân nhiễm Covid <br />
+                - Hỗ trợ thông tin qua điện thoại của tổng đài
+              </p>
+            </ul>
+          </div>
+
+          <!-- Thông tin sở thích -->
+          <div
+            class="vmB g-col-12 g-col-md-6 g-col-xl-4 hob border p-5"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Sở thích</h1>
+              <i class="icon1 ic-telescope"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <div class="gridh d-none ttcn">
+              <i class="ic-megaphone"></i>
+              <i class="ic-strategy"></i>
+              <i class="ic-hotairballoon"></i>
+              <i class="ic-basket"></i>
+              <p>Âm nhạc</p>
+              <p>Chơi game</p>
+              <p>Du lịch</p>
+              <p>Nấu ăn</p>
+            </div>
+          </div>
+
+          <!-- Thông tin ngôn ngữ -->
+          <div
+            class="vmB g-col-12 g-col-md-6 g-col-xl-4 lang border p-5"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Ngôn ngữ</h1>
+              <i class="icon1 ic-mic"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning viewM"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <ul class="ul ulls d-none ttcn">
+              <li><h4>Tiếng Anh: IELTS 6.5</h4></li>
+              <div>
+                <span class="bar fill"></span>
+                <span class="bar fill"></span>
+                <span class="bar"></span>
+              </div>
+              <li><h4>Tiếng Nhật: JLPT N3</h4></li>
+              <span class="bar fill"></span>
+              <span class="bar fill"></span>
+              <span class="bar"></span>
+            </ul>
+          </div>
+
+          <!-- Thông tin kỹ năng -->
+          <div
+            class="vmB g-col-12 g-col-md-6 g-col-xl-4 skills border p-5"
+            onmousemove="view_more(this)"
+            onmouseout="view_out(this)"
+          >
+            <div class="gridc">
+              <h1>Kỹ năng</h1>
+              <i class="icon1 ic-tools-2"></i>
+            </div>
+            <div class="viewb p-3 d-grid justify-content-md-center d-none">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="viewcontent(this)"
+              >
+                View More
+              </button>
+            </div>
+            <ul class="ul ulls d-none ttcn">
+              <li><h4>HTML/CSS: Fundamental</h4></li>
+              <span class="bar fill"></span>
+              <span class="bar fill"></span>
+              <span class="bar"></span>
+              <li><h4>NodeJS: Intermediate</h4></li>
+              <span class="bar fill"></span>
+              <span class="bar fill"></span>
+              <span class="bar"></span>
+              <li><h4>Javascript: Intermediate</h4></li>
+              <span class="bar fill"></span>
+              <span class="bar fill"></span>
+              <span class="bar"></span>
+              <li><h4>R: Intermediate</h4></li>
+              <span class="bar fill"></span>
+              <span class="bar fill"></span>
+              <span class="bar"></span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chứng chỉ và Giải thưởng -->
+    <section id="certificate" class="bg-body-secondary py-4">
+      <div class="container">
+        <h1 class="section-title p-2 mb-4">Chứng chỉ - Giải thưởng</h1>
+
+        <!-- Chứng chỉ 1 -->
+        <div class="ccc grid text-left gap-4">
+          <div class="cc1 g-col-12 g-col-md-6">
+            <div class="grid cc1">
+              <div class="g-col-12 g-col-sm-12 g-col-md-12 g-col-lg-6">
+                <img
+                  src="./images/Cert_DBI.png"
+                  alt="cert-DBI"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="g-col-12 g-col-md-12 g-col-lg-6">
+                <h4 class="c-title p-2">
+                  CHỨNG CHỈ CHUYÊN VIÊN THAM VẤN TÂM LÝ WELINK
+                </h4>
+                <p>
+                  - Chương trình Hỗ trợ Chuyên viên Tâm lý theo hướng Tham vấn
+                  Tâm lý
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chứng chỉ 2 -->
+          <div class="cc2 g-col-12 g-col-md-6">
+            <div class="grid">
+              <div class="g-col-12 g-col-md-12 g-col-lg-6">
+                <img
+                  src="./images/Cert_PRF.png"
+                  alt="cert-PRF"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="g-col-12 g-col-md-12 g-col-lg-6">
+                <h4 class="c-title p-2">
+                  CHỨNG CHỈ LẬP TRÌNH JAVASCRIPT-FUNIX
+                </h4>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA: 8.6</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Đường line giữa chứng chỉ 1,2 và 3 -->
+          <span class="line123"></span>
+
+          <!-- Chứng chỉ 3 -->
+          <div class="cc3 g-col-12 g-col-md-6">
+            <div class="grid cc3">
+              <div class="g-col-12 g-col-md-12 g-col-lg-6">
+                <img
+                  src="./images/Cert_WEB.png"
+                  alt="cert-WEB"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="g-col-12 g-col-md-12 g-col-lg-6">
+                <h4 class="c-title p-2">CHỨNG CHỈ THIẾT KẾ DATABASE-FUNIX</h4>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA: 8.6</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Các dự án -->
+    <section id="project">
+      <div class="container">
+        <h1 class="section-title mb-4">Dự án</h1>
+
+        <!-- Thông tin các dự án -->
+        <div class="container grid">
+          <!-- CV Cá nhân -->
+          <div class="g-col-12 g-col-md-4 border">
+            <a href="./digital-cv.html" class="d-cv"
+              ><img
+                src="./images/project_1.png"
+                alt="project-1"
+                class="img-fluid"
+            /></a>
+
+            <h5
+              class="text-center text-uppercase fw-semibold fs-4 p-2 m-0 border-top"
+            >
+              Cv <br />
+              Cá nhân
+            </h5>
+            <div class="container-fluid border-top">
+              <div class="row">
+                <div
+                  class="col-12 col-md-3 col-lg-3 text-center align-middle px-0 py-1 align-content-center"
+                >
+                  <span class="yearp">2021</span>
+                </div>
+                <div class="col-12 col-md-9 col-lg-9">
+                  <div class="row">
+                    <div
+                      class="col-12 col-md-12 col-lg-4 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-user-1"></i>
+                      <span>FUNIX</span>
+                    </div>
+                    <div
+                      class="col-12 col-md-12 col-lg-8 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-lamp"></i>
+                      <span>Developer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-i-grid">
+              <p>Mô tả</p>
+              <p>
+                Trang Web CV cá nhân ôn line, gồm các thông tin cá nhân cũng như
+                các kỹ năng nghề nghiệp
+              </p>
+            </div>
+            <div class="p-i-grid">
+              <p>Nhiệm vụ</p>
+              <p>- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</p>
+            </div>
+            <div class="p-i-grid">
+              <p>Công nghệ</p>
+              <p class="proj-1">- HTML, CSS</p>
+            </div>
+          </div>
+
+          <!-- Dự án Quản lý Thú cưng -->
+          <div class="g-col-12 g-col-md-4 border">
+            <a href="./digital-cv.html" class="d-cv"
+              ><img
+                src="./images/project_2.png"
+                alt="project-2"
+                class="img-fluid"
+            /></a>
+
+            <h5
+              class="text-center text-uppercase fw-semibold fs-4 p-2 m-0 border-top"
+            >
+              Trang Web <br />Quản lý Thú cưng
+            </h5>
+            <div class="container-fluid border-top">
+              <div class="row">
+                <div
+                  class="col-12 col-md-3 col-lg-3 text-center align-middle px-0 py-1 align-content-center"
+                >
+                  <span class="yearp">2021</span>
+                </div>
+                <div class="col-12 col-md-9 col-lg-9">
+                  <div class="row">
+                    <div
+                      class="col-12 col-md-12 col-lg-4 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-user-1"></i>
+                      <span>FUNIX</span>
+                    </div>
+                    <div
+                      class="col-12 col-md-12 col-lg-8 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-lamp"></i>
+                      <span>Developer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-i-grid">
+              <p>Mô tả</p>
+              <p>
+                Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân nặng,
+                giống, tình trạng tiêm chủng... Bao gồm các chức năng
+                thêm/sửa/xóa.
+              </p>
+            </div>
+            <div class="p-i-grid">
+              <p>Nhiệm vụ</p>
+              <p>- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</p>
+            </div>
+            <div class="p-i-grid">
+              <p>Công nghệ</p>
+              <p>- HTML, CSS, Javascript</p>
+            </div>
+          </div>
+
+          <!-- Dự án Trang Web xem Tin tức -->
+          <div class="g-col-12 g-col-md-4 border">
+            <a href="./digital-cv.html" class="d-cv"
+              ><img
+                src="./images/project_3.png"
+                alt="project-3"
+                class="img-fluid"
+            /></a>
+
+            <h5
+              class="text-center text-uppercase fw-semibold fs-4 p-2 m-0 border-top"
+            >
+              Trang Web <br />Xem Tin tức
+            </h5>
+            <div class="container-fluid border-top">
+              <div class="row">
+                <div
+                  class="col-12 col-md-3 col-lg-3 text-center align-middle px-0 py-1 align-content-center"
+                >
+                  <span class="yearp">2021</span>
+                </div>
+                <div class="col-12 col-md-9 col-lg-9">
+                  <div class="row">
+                    <div
+                      class="col-12 col-md-12 col-lg-4 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-user-1"></i>
+                      <span>FUNIX</span>
+                    </div>
+                    <div
+                      class="col-12 col-md-12 col-lg-8 px-0 py-1 align-middle text-center align-content-center"
+                    >
+                      <i class="icon-lamp"></i>
+                      <span>Developer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-i-grid">
+              <p>Mô tả</p>
+              <p>
+                Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng có
+                thể tìm kiếm các tin tức dựa theo các từ khóa.
+              </p>
+            </div>
+            <div class="p-i-grid">
+              <p>Nhiệm vụ</p>
+              <p>- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</p>
+            </div>
+            <div class="p-i-grid">
+              <p>Công nghệ</p>
+              <p>- HTML, CSS, Javascript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thông tin liên hệ -->
+    <section id="footer" class="bg-body-secondary">
+      <div class="container">
+        <ul>
+          <li>
+            <!-- Facebook -->
+            <a href="http://facebook.com" class="a"
+              ><i class="contact-icon icon-facebook-circled"></i>Facebook</a
+            >
+          </li>
+          <li>
+            <!-- LinkedIn -->
+            <a href="http://linkedin.com" class="a"
+              ><i class="contact-icon icon-linkedin-circled"></i>Linked</a
+            >
+          </li>
+          <li>
+            <!-- GitHub -->
+            <a href="http://github.com" class="a"
+              ><i class="contact-icon icon-github-circled"></i>Github</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js "></script>
+  </body>
+</html>

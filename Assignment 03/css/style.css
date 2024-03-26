@@ -1,0 +1,272 @@
+/* Phần bố cục chung */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  line-height: 2;
+}
+
+/* Tiêu đề của CV */
+#banner {
+  position: relative;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+/* Kích thước ảnh Banner */
+.imgbd,
+.imgb {
+  width: 100%;
+  height: 415px;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(80%);
+}
+
+/* Tiêu đề thông tin */
+.tt {
+  position: absolute;
+  line-height: 3.5;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px 2px black;
+}
+
+/* Điều chỉnh tiêu đề của tất cả các nội dung */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Điều chỉnh kích thước đoạn văn */
+p {
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+
+/* Thanh điều hướng navigation */
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+/* Hình avatar của bản thân */
+.avatar {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 4px solid #f7f7f7;
+  border-radius: 50%;
+}
+
+/* Thông tin cá nhân và mục tiêu nghề nghiệp */
+#about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Điều chỉnh đoạn văn của thông tin cá nhân và mục tiêu nghề nghiệp */
+.j-pi {
+  padding-left: 0;
+}
+
+/* Phần mục tiêu nghề nghiệp */
+#target {
+  background-color: rgb(208, 203, 203);
+  padding: 70px;
+  text-align: justify;
+}
+
+/* Phần thông tin cá nhân */
+#personal-info {
+  background-color: rgb(183, 183, 179);
+  padding: 70px;
+}
+
+/* Điều chỉnh các định dạng ul của thông tin cá nhân */
+#personal-info > ul {
+  list-style: none;
+}
+
+/* Điều chỉnh thuộc tính ul của thông tin nghề nghiệp */
+.ul {
+  margin-left: 20px;
+  text-align: justify;
+  padding-left: 10px;
+}
+
+/* Điều chỉnh tiêu đề các thông tin nghề nghiệp */
+.gridc {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Điều chỉnh tiêu đề thông tin các thông tin về kinh nghiệm, học vấn, v..v.. */
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Điều chỉnh toàn bộ các icon */
+.icon1 {
+  font-size: 45px;
+  color: blue;
+}
+
+/* Điều chỉnh nút bullet của Kinh nghiệm, Học vấn và Hoạt động */
+.uleea > li::marker {
+  color: blue;
+  font-size: 20px;
+}
+
+/* Điều chỉnh thông tin kinh nghiệm hiện tại */
+.yearp {
+  background-color: rgb(111, 156, 199);
+  color: #f7f7f7;
+  border: 1px solid rgb(111, 156, 199);
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+
+/* Điều chỉnh thông tin sở thích */
+.gridh {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin-top: 30px;
+  gap: 15px;
+  line-height: 1;
+}
+
+/* Điều chỉnh các icon của sở thích */
+.gridh i {
+  padding: 5px;
+  width: 40px;
+  border: 2px solid rgb(111, 156, 199);
+  font-size: 20px;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+/* Điều chỉnh nút bullet của Ngôn ngữ và Kỹ năng */
+.ulls {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+/* Điều chỉnh thanh bar của Ngôn ngữ và Kỹ năng */
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: grey;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Điều chỉnh mức độ của thanh Bar */
+.fill {
+  background-color: #199cdb;
+}
+
+/* Điều chỉnh khung giữa chứng chỉ 1,2 */
+.cc2 {
+  border-left: 2px solid #d6c08d;
+  padding-left: 10px;
+}
+
+/* Điều chỉnh khung giữa chứng chỉ 1,2 và 3 */
+.line123 {
+  grid-column: 1/-1;
+  height: 2px;
+  background-color: #d6c08d;
+}
+
+/* Phần dự án chung*/
+#project {
+  padding: 30px 0px 60px 0px;
+}
+
+/* Điều chỉnh thông tin của Table */
+.p-i-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Phần liên hệ */
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 15px;
+  margin-bottom: 0;
+  padding: 0px;
+}
+
+/* Điều chỉnh phần thông tin liên hệ */
+.a {
+  text-decoration: none;
+}
+
+/* Phần thông tin digital charter  */
+
+/* Điều chỉnh số cột và số hàng trong body */
+.all {
+  --bs-columns: 4;
+  --bs-rows: 2;
+}
+
+/* Điều chỉnh các tiêu đề */
+.h2d {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00557d;
+  border-bottom: 2px solid grey;
+  margin: 5px;
+}
+
+/* Điều chỉnh kích thước lá cờ của Goals */
+.icon {
+  font-size: 30px;
+}
+
+/* Điều chỉnh phần viền dưới của goal và timeline */
+.b-b {
+  border-bottom: 2px solid rgb(163, 163, 163);
+  padding: 10px 0px;
+}
+
+/* Điều chỉnh đoạn văn của goals và scopes */
+.p-0,
+.io {
+  text-align: justify;
+}
+
+/* Điều chỉnh các con số của timeline */
+.num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgb(114, 12, 100);
+  border-radius: 50%;
+  background-color: #876691;
+  color: white;
+}
